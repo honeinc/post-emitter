@@ -1,0 +1,25 @@
+{
+  "name": "post-emitter",
+  "version": "0.1.0",
+  "description": "Talk between a iframe and parent window using events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parentdoc": "browserify examples/index.js -o examples/bundle.js -d",
+    "iframe": "browserify examples/iframe.js -o examples/iframe.bundle.js -d",
+    "examples": "npm run parentdoc && npm run iframe" 
+  },
+  "keywords": [
+    "postMessage",
+    "iframe",
+    "communitcation"
+  ],
+  "author": "Jacob Lowe",
+  "license": "MIT",
+  "dependencies": {
+    "eventemitter2": "^0.4.14"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.0"
+  }
+}
